@@ -23,13 +23,6 @@ spec:
         - name: {{ include "simple-app.name" . }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          command: ["uvicorn"]
-          args:
-            - "app.main:app"
-            - "--host"
-            - "0.0.0.0"
-            - "--port"
-            - "{{ .Values.deployment.containerPort }}"
           ports:
             - containerPort: {{ .Values.deployment.containerPort }}
           livenessProbe:
