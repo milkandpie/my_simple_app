@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: dungdocker804/my_simple_app
   tag: "latest"
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 service:
   type: ClusterIP
@@ -23,4 +23,3 @@ deployment:
       port: 8080
     initialDelaySeconds: 2
     periodSeconds: 5
-

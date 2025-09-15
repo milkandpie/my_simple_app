@@ -76,6 +76,11 @@ Dockerfile
 chart.lock
 charts/
 release-*.tgz
+# Ignore development-only Helm values that may contain secrets
+helm/simple-app/values_dev.yaml
+
+# Ignore local k8s secret manifests
+k8s/*.yaml
 
 # Misc
 *.swp
