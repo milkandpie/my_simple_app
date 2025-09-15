@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: simple-app
+  repository: dungdocker804/my_simple_app
   tag: "latest"
   pullPolicy: IfNotPresent
 
